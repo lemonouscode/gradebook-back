@@ -39,7 +39,8 @@ class AuthController extends Controller
             'email' => 'required|email',
             'image_url' => 'required',
             'tos' => 'required|boolean|accepted',
-            'password' => ['required', 'min:8', 'regex:/\d/']
+            'password' => ['required', 'min:8', 'regex:/\d/'],
+            'password_confirmation' => 'required|same:password',
             // 'password' => 'required|min:8|numeric|min:1'
         ]);
 
